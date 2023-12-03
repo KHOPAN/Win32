@@ -225,6 +225,22 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    MFShutdown
+	 * Signature: ()J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_MFShutdown
+	(JNIEnv*, jclass);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
+	 * Method:    MFStartup
+	 * Signature: (JJ)J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_MFStartup
+	(JNIEnv*, jclass, jlong, jlong);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    Polygon
 	 * Signature: (Lcom/khopan/win32/struct/memory/HDC;[Lcom/khopan/win32/struct/holder/POINT;I)I
 	 */

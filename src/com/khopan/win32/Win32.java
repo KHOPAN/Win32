@@ -119,6 +119,8 @@ HRESULT {
 	public static native int GetSystemMetrics(int nIndex);
 	public static native int InvalidateRect(HWND hWnd, RECT lpRect, boolean bErase);
 	public static native HCURSOR LoadCursor(HINSTANCE hInstance, int cursorType);
+	public static native long MFShutdown();
+	public static native long MFStartup(long Version, long dwFlags);
 	public static native int Polygon(HDC hdc, POINT[] apt, int cpt);
 	public static native void PostQuitMessage(int nExitCode);
 	public static native int RegisterClass(WNDCLASS lpWndClass);
