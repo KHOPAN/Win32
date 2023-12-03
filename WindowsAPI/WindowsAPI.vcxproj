@@ -142,6 +142,7 @@
     <ClCompile Include="CoInitialize.cpp" />
     <ClCompile Include="CoInitializeEx.cpp" />
     <ClCompile Include="com_khopan_win32_Win32.h" />
+    <ClCompile Include="CoTaskMemFree.cpp" />
     <ClCompile Include="CoUninitialize.cpp" />
     <ClCompile Include="CreateCompatibleBitmap.cpp" />
     <ClCompile Include="CreateCompatibleDC.cpp" />

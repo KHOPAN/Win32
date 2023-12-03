@@ -39,6 +39,7 @@ import com.khopan.win32.constants.window.WindowMessages;
 import com.khopan.win32.constants.window.WindowNotifications;
 import com.khopan.win32.constants.window.WindowStyles;
 import com.khopan.win32.mediafoundation.IMFAttributes;
+import com.khopan.win32.struct.MemoryStruct;
 import com.khopan.win32.struct.holder.BITMAPINFO;
 import com.khopan.win32.struct.holder.BITMAPINFOHEADER;
 import com.khopan.win32.struct.holder.LOGFONT;
@@ -110,6 +111,7 @@ GUIDs {
 	public static native int BitBlt(HDC hdc, int x, int y, int cx, int cy, HDC hdcSrc, int x1, int y1, long rop);
 	public static native long CoInitialize(LPVOID pvReserved);
 	public static native long CoInitializeEx(LPVOID pvReserved, long dwCoInit);
+	public static native void CoTaskMemFree(MemoryStruct pv);
 	public static native void CoUninitialize();
 	public static native HBITMAP CreateCompatibleBitmap(HDC hdc, int cx, int cy);
 	public static native HDC CreateCompatibleDC(HDC hdc);

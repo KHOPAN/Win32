@@ -49,6 +49,14 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    CoTaskMemFree
+	 * Signature: (Lcom/khopan/win32/struct/MemoryStruct;)V
+	 */
+	JNIEXPORT void JNICALL Java_com_khopan_win32_Win32_CoTaskMemFree
+	(JNIEnv*, jclass, jobject);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    CoUninitialize
 	 * Signature: ()V
 	 */
