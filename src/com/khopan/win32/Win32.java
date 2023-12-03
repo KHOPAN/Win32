@@ -17,6 +17,11 @@ import com.khopan.win32.constants.SystemMetrics;
 import com.khopan.win32.constants.button.ButtonStyles;
 import com.khopan.win32.constants.keyboard.KeyboardMessages;
 import com.khopan.win32.constants.keyboard.KeyboardNotifications;
+import com.khopan.win32.constants.messagebox.MessageBoxButton;
+import com.khopan.win32.constants.messagebox.MessageBoxDefaultButton;
+import com.khopan.win32.constants.messagebox.MessageBoxIcon;
+import com.khopan.win32.constants.messagebox.MessageBoxModal;
+import com.khopan.win32.constants.messagebox.MessageBoxOther;
 import com.khopan.win32.constants.systemparameterinfo.AccessibilityParameters;
 import com.khopan.win32.constants.systemparameterinfo.DesktopParameters;
 import com.khopan.win32.constants.systemparameterinfo.IconParameters;
@@ -83,7 +88,12 @@ HWNDInsertAfter,
 SetWindowPosFlags,
 ShowWindow,
 CoInit,
-HRESULT {
+HRESULT,
+MessageBoxButton,
+MessageBoxDefaultButton,
+MessageBoxIcon,
+MessageBoxModal,
+MessageBoxOther {
 	private Win32() {}
 
 	static {
@@ -123,6 +133,7 @@ HRESULT {
 	public static native int InitiateSystemShutdownEx(String lpMachineName, String lpMessage, long dwTimeout, boolean bForceAppsClosed, boolean bRebootAfterShutdown, long dwReason);
 	public static native int InvalidateRect(HWND hWnd, RECT lpRect, boolean bErase);
 	public static native HCURSOR LoadCursor(HINSTANCE hInstance, int cursorType);
+	public static native int MessageBox(HWND hWnd, String lpText, String lpCaption, long uType);
 	public static native long MFShutdown();
 	public static native long MFStartup(long Version, long dwFlags);
 	public static native int Polygon(HDC hdc, POINT[] apt, int cpt);

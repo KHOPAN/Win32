@@ -257,6 +257,14 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    MessageBox
+	 * Signature: (Lcom/khopan/win32/struct/memory/HWND;Ljava/lang/String;Ljava/lang/String;J)I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_MessageBox
+	(JNIEnv*, jclass, jobject, jstring, jstring, jlong);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    MFShutdown
 	 * Signature: ()J
 	 */
