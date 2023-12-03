@@ -201,6 +201,12 @@
     <ClCompile Include="ExitWindowsEx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InitiateSystemShutdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InitiateSystemShutdownEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="javahelper.h">

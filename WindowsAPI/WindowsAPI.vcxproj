@@ -163,6 +163,8 @@
     <ClCompile Include="GetModuleHandle.cpp" />
     <ClCompile Include="GetStockObject.cpp" />
     <ClCompile Include="GetSystemMetrics.cpp" />
+    <ClCompile Include="InitiateSystemShutdown.cpp" />
+    <ClCompile Include="InitiateSystemShutdownEx.cpp" />
     <ClCompile Include="InvalidateRect.cpp" />
     <ClCompile Include="LoadCursor.cpp" />
     <ClCompile Include="MFShutdown.cpp" />

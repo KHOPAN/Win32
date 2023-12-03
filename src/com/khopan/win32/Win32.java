@@ -118,6 +118,8 @@ HRESULT {
 	public static native HINSTANCE GetModuleHandle(String lpModuleName);
 	public static native long GetStockObject(int i);
 	public static native int GetSystemMetrics(int nIndex);
+	public static native int InitiateSystemShutdown(String lpMachineName, String lpMessage, long dwTimeout, boolean bForceAppsClosed, boolean bRebootAfterShutdown);
+	public static native int InitiateSystemShutdownEx(String lpMachineName, String lpMessage, long dwTimeout, boolean bForceAppsClosed, boolean bRebootAfterShutdown, long dwReason);
 	public static native int InvalidateRect(HWND hWnd, RECT lpRect, boolean bErase);
 	public static native HCURSOR LoadCursor(HINSTANCE hInstance, int cursorType);
 	public static native long MFShutdown();

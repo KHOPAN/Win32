@@ -217,6 +217,22 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    InitiateSystemShutdown
+	 * Signature: (Ljava/lang/String;Ljava/lang/String;JZZ)I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_InitiateSystemShutdown
+	(JNIEnv*, jclass, jstring, jstring, jlong, jboolean, jboolean);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
+	 * Method:    InitiateSystemShutdownEx
+	 * Signature: (Ljava/lang/String;Ljava/lang/String;JZZJ)I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_InitiateSystemShutdownEx
+	(JNIEnv*, jclass, jstring, jstring, jlong, jboolean, jboolean, jlong);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    InvalidateRect
 	 * Signature: (Lcom/khopan/win32/struct/memory/HWND;Lcom/khopan/win32/struct/holder/RECT;Z)I
 	 */
