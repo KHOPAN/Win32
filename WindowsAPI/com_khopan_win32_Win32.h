@@ -265,6 +265,14 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    MFCreateAttributes
+	 * Signature: (Lcom/khopan/win32/mediafoundation/IMFAttributes;I)J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_MFCreateAttributes
+	(JNIEnv*, jclass, jobject, jint);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    MFShutdown
 	 * Signature: ()J
 	 */

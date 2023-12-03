@@ -164,11 +164,13 @@
     <ClCompile Include="GetModuleHandle.cpp" />
     <ClCompile Include="GetStockObject.cpp" />
     <ClCompile Include="GetSystemMetrics.cpp" />
+    <ClCompile Include="IMFAttributes.SetGUID.cpp" />
     <ClCompile Include="InitiateSystemShutdown.cpp" />
     <ClCompile Include="InitiateSystemShutdownEx.cpp" />
     <ClCompile Include="InvalidateRect.cpp" />
     <ClCompile Include="LoadCursor.cpp" />
     <ClCompile Include="MessageBox.cpp" />
+    <ClCompile Include="MFCreateAttributes.cpp" />
     <ClCompile Include="MFShutdown.cpp" />
     <ClCompile Include="MFStartup.cpp" />
     <ClCompile Include="Polygon.cpp" />
@@ -192,6 +194,7 @@
     <ClCompile Include="zBITMAPINFOHEADER.cpp" />
     <ClCompile Include="zCommon.cpp" />
     <ClCompile Include="zException.cpp" />
+    <ClCompile Include="zGUID.cpp" />
     <ClCompile Include="zLOGFONT.cpp" />
     <ClCompile Include="zMSG.cpp" />
     <ClCompile Include="zNONCLIENTMETRICS.cpp" />
@@ -204,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="com_khopan_win32_BareMetal.h" />
+    <ClInclude Include="com_khopan_win32_mediafoundation_IMFAttributes.h" />
     <ClInclude Include="javahelper.h" />
     <ClInclude Include="procedure.h" />
   </ItemGroup>

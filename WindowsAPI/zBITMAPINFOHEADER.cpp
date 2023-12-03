@@ -84,17 +84,17 @@ bool getNativeBITMAPINFOHEADER(JNIEnv* environment, BITMAPINFOHEADER& result, jo
 		return true;
 	}
 
-	result.biSize = environment->GetLongField(input, biSizeField);
-	result.biWidth = environment->GetLongField(input, biWidthField);
-	result.biHeight = environment->GetLongField(input, biHeightField);
-	result.biPlanes = environment->GetIntField(input, biPlanesField);
-	result.biBitCount = environment->GetIntField(input, biBitCountField);
-	result.biCompression = environment->GetLongField(input, biCompressionField);
-	result.biSizeImage = environment->GetLongField(input, biSizeImageField);
-	result.biXPelsPerMeter = environment->GetLongField(input, biXPelsPerMeterField);
-	result.biYPelsPerMeter = environment->GetLongField(input, biYPelsPerMeterField);
-	result.biClrUsed = environment->GetLongField(input, biClrUsedField);
-	result.biClrImportant = environment->GetLongField(input, biClrImportantField);
+	result.biSize = static_cast<DWORD>(environment->GetLongField(input, biSizeField));
+	result.biWidth = static_cast<LONG>(environment->GetLongField(input, biWidthField));
+	result.biHeight = static_cast<LONG>(environment->GetLongField(input, biHeightField));
+	result.biPlanes = static_cast<WORD>(environment->GetIntField(input, biPlanesField));
+	result.biBitCount = static_cast<WORD>(environment->GetIntField(input, biBitCountField));
+	result.biCompression = static_cast<DWORD>(environment->GetLongField(input, biCompressionField));
+	result.biSizeImage = static_cast<DWORD>(environment->GetLongField(input, biSizeImageField));
+	result.biXPelsPerMeter = static_cast<LONG>(environment->GetLongField(input, biXPelsPerMeterField));
+	result.biYPelsPerMeter = static_cast<LONG>(environment->GetLongField(input, biYPelsPerMeterField));
+	result.biClrUsed = static_cast<DWORD>(environment->GetLongField(input, biClrUsedField));
+	result.biClrImportant = static_cast<DWORD>(environment->GetLongField(input, biClrImportantField));
 	return false;
 }
 

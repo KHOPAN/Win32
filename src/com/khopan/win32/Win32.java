@@ -2,6 +2,7 @@ package com.khopan.win32;
 
 import com.khopan.win32.constants.CoInit;
 import com.khopan.win32.constants.DrawTextFormat;
+import com.khopan.win32.constants.GUIDs;
 import com.khopan.win32.constants.HBRUSHTypes;
 import com.khopan.win32.constants.HRESULT;
 import com.khopan.win32.constants.HWNDInsertAfter;
@@ -37,6 +38,7 @@ import com.khopan.win32.constants.window.WindowExtendedStyles;
 import com.khopan.win32.constants.window.WindowMessages;
 import com.khopan.win32.constants.window.WindowNotifications;
 import com.khopan.win32.constants.window.WindowStyles;
+import com.khopan.win32.mediafoundation.IMFAttributes;
 import com.khopan.win32.struct.holder.BITMAPINFO;
 import com.khopan.win32.struct.holder.BITMAPINFOHEADER;
 import com.khopan.win32.struct.holder.LOGFONT;
@@ -93,7 +95,8 @@ MessageBoxButton,
 MessageBoxDefaultButton,
 MessageBoxIcon,
 MessageBoxModal,
-MessageBoxOther {
+MessageBoxOther,
+GUIDs {
 	private Win32() {}
 
 	static {
@@ -134,6 +137,7 @@ MessageBoxOther {
 	public static native int InvalidateRect(HWND hWnd, RECT lpRect, boolean bErase);
 	public static native HCURSOR LoadCursor(HINSTANCE hInstance, int cursorType);
 	public static native int MessageBox(HWND hWnd, String lpText, String lpCaption, long uType);
+	public static native long MFCreateAttributes(IMFAttributes ppMFAttributes, int cInitialSize);
 	public static native long MFShutdown();
 	public static native long MFStartup(long Version, long dwFlags);
 	public static native int Polygon(HDC hdc, POINT[] apt, int cpt);

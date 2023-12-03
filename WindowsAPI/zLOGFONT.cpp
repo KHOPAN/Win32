@@ -1,7 +1,6 @@
 #include <string>
 #include <Windows.h>
 #include <jni.h>
-#include "com_khopan_win32_Win32.h"
 #include "javahelper.h"
 
 bool getNativeLOGFONT(JNIEnv* environment, LOGFONTA& result, jobject input) {
@@ -131,7 +130,7 @@ bool getNativeLOGFONT(JNIEnv* environment, LOGFONTA& result, jobject input) {
 	jchar* values = environment->GetCharArrayElements(array, NULL);
 
 	for(int i = 0; i < LF_FACESIZE; i++) {
-		result.lfFaceName[i] = values[i];
+		result.lfFaceName[i] = static_cast<CHAR>(values[i]);
 	}
 
 	environment->ReleaseCharArrayElements(array, values, NULL);

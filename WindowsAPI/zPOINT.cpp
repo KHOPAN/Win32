@@ -21,8 +21,8 @@ bool getNativePOINT(JNIEnv* environment, POINT& result, jobject input) {
 		return true;
 	}
 
-	result.x = environment->GetLongField(input, xField);
-	result.y = environment->GetLongField(input, yField);
+	result.x = static_cast<LONG>(environment->GetLongField(input, xField));
+	result.y = static_cast<LONG>(environment->GetLongField(input, yField));
 	return false;
 }
 

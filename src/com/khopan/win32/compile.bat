@@ -1,2 +1,2 @@
 @echo off
-javac -h . *.java ./struct/*.java ./constants/*.java ./constants/button/*.java ./constants/keyboard/*.java ./constants/systemparameterinfo/*.java ./constants/window/*.java ./exception/*.java ./struct/*.java ./struct/function/*.java ./struct/holder/*.java ./struct/memory/*.java ./utils/*.java
+javac -h . *.java ./mediafoundation/*.java ./struct/*.java ./constants/*.java ./constants/messagebox/*.java ./constants/button/*.java ./constants/keyboard/*.java ./constants/systemparameterinfo/*.java ./constants/window/*.java ./exception/*.java ./struct/*.java ./struct/function/*.java ./struct/holder/*.java ./struct/memory/*.java ./utils/*.java

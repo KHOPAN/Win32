@@ -58,7 +58,7 @@ bool getNativeMSG(JNIEnv* environment, MSG& result, jobject input) {
 	result.message = environment->GetIntField(input, messageField);
 	result.wParam = environment->GetLongField(input, wParamField);
 	result.lParam = environment->GetLongField(input, lParamField);
-	result.time = environment->GetLongField(input, timeField);
+	result.time = static_cast<DWORD>(environment->GetLongField(input, timeField));
 	return false;
 }
 

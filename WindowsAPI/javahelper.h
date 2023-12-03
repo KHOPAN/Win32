@@ -36,3 +36,6 @@ bool getJavaBITMAPINFOHEADER(JNIEnv*, jobject&, BITMAPINFOHEADER);
 
 bool getNativeRGBQUAD(JNIEnv*, RGBQUAD&, jobject);
 bool getJavaRGBQUAD(JNIEnv*, jobject&, RGBQUAD);
+
+bool getNativeGUID(JNIEnv*, GUID&, jobject);
+bool getJavaGUID(JNIEnv*, jobject&, GUID);
