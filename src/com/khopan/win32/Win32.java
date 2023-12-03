@@ -110,6 +110,7 @@ HRESULT {
 	public static native long DispatchMessage(MSG lpMsg);
 	public static native int DrawText(HDC hdc, String lpchText, int cchText, RECT lprc, int format);
 	public static native int EndPaint(HWND hWnd, PAINTSTRUCT lpPaint);
+	public static native int ExitWindowsEx(int uFlags, long dwReason);
 	public static native int FillRect(HDC hDC, RECT lprc, HBRUSH hbr);
 	public static native int GetClientRect(HWND hWnd, RECT lpRect);
 	public static native long GetLastError();

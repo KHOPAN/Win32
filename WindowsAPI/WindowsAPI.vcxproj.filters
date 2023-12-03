@@ -198,6 +198,9 @@
     <ClCompile Include="MFStartup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ExitWindowsEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="javahelper.h">

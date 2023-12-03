@@ -155,6 +155,7 @@
     <ClCompile Include="DispatchMessage.cpp" />
     <ClCompile Include="DrawText.cpp" />
     <ClCompile Include="EndPaint.cpp" />
+    <ClCompile Include="ExitWindowsEx.cpp" />
     <ClCompile Include="FillRect.cpp" />
     <ClCompile Include="GetClientRect.cpp" />
     <ClCompile Include="GetLastError.cpp" />

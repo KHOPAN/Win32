@@ -153,6 +153,14 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    ExitWindowsEx
+	 * Signature: (IJ)I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_ExitWindowsEx
+	(JNIEnv*, jclass, jint, jlong);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    FillRect
 	 * Signature: (Lcom/khopan/win32/struct/memory/HDC;Lcom/khopan/win32/struct/holder/RECT;Lcom/khopan/win32/struct/memory/HBRUSH;)I
 	 */
