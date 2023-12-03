@@ -151,4 +151,16 @@ HRESULT {
 	public static boolean FAILED(long hr) {
 		return hr < 0;
 	}
+
+	/**
+	 * Utilities used for format an error message
+	 * from GetLastError(), because implementing
+	 * the function FormatMessageW() would be
+	 * such a pain
+	 *
+	 * @param errorCode the error code from GetLastError()
+	 * @return a formatted error string, or null if there
+	 * is no error
+	 */
+	public static native String FormatErrorMessage(long errorCode);
 }

@@ -335,6 +335,14 @@ extern "C" {
 	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_TranslateMessage
 	(JNIEnv*, jclass, jobject);
 
+	/*
+	 * Class:     com_khopan_win32_Win32
+	 * Method:    FormatErrorMessage
+	 * Signature: (J)Ljava/lang/String;
+	 */
+	JNIEXPORT jstring JNICALL Java_com_khopan_win32_Win32_FormatErrorMessage
+	(JNIEnv*, jclass, jlong);
+
 #ifdef __cplusplus
 }
 #endif
