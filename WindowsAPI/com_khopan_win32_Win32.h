@@ -25,6 +25,30 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    CoInitialize
+	 * Signature: (Lcom/khopan/win32/struct/memory/LPVOID;)J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_CoInitialize
+	(JNIEnv*, jclass, jobject);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
+	 * Method:    CoInitializeEx
+	 * Signature: (Lcom/khopan/win32/struct/memory/LPVOID;J)J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_CoInitializeEx
+	(JNIEnv*, jclass, jobject, jlong);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
+	 * Method:    CoUninitialize
+	 * Signature: ()V
+	 */
+	JNIEXPORT void JNICALL Java_com_khopan_win32_Win32_CoUninitialize
+	(JNIEnv*, jclass);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    CreateCompatibleBitmap
 	 * Signature: (Lcom/khopan/win32/struct/memory/HDC;II)Lcom/khopan/win32/struct/memory/HBITMAP;
 	 */

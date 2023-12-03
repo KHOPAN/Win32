@@ -1,7 +1,9 @@
 package com.khopan.win32;
 
+import com.khopan.win32.constants.CoInit;
 import com.khopan.win32.constants.DrawTextFormat;
 import com.khopan.win32.constants.HBRUSHTypes;
+import com.khopan.win32.constants.HRESULT;
 import com.khopan.win32.constants.HWNDInsertAfter;
 import com.khopan.win32.constants.MouseCursors;
 import com.khopan.win32.constants.MouseNotifications;
@@ -79,7 +81,9 @@ WindowClassStyles,
 HBRUSHTypes,
 HWNDInsertAfter,
 SetWindowPosFlags,
-ShowWindow {
+ShowWindow,
+CoInit,
+HRESULT {
 	private Win32() {}
 
 	static {
@@ -90,6 +94,9 @@ ShowWindow {
 
 	public static native HDC BeginPaint(HWND hWnd, PAINTSTRUCT lpPaint);
 	public static native int BitBlt(HDC hdc, int x, int y, int cx, int cy, HDC hdcSrc, int x1, int y1, long rop);
+	public static native long CoInitialize(LPVOID pvReserved);
+	public static native long CoInitializeEx(LPVOID pvReserved, long dwCoInit);
+	public static native void CoUninitialize();
 	public static native HBITMAP CreateCompatibleBitmap(HDC hdc, int cx, int cy);
 	public static native HDC CreateCompatibleDC(HDC hdc);
 	public static native HFONT CreateFontIndirect(LOGFONT lplf);
@@ -135,5 +142,13 @@ ShowWindow {
 		BITMAPINFO info = new BITMAPINFO();
 		info.bmiHeader = lpbmih;
 		return Win32.SetDIBitsToDevice(hdc, xDest, yDest, w, h, xSrc, ySrc, StartScan, cLines, lpvBits, info, ColorUse);
+	}
+
+	public static boolean SUCCEEDED(long hr) {
+		return hr >= 0;
+	}
+
+	public static boolean FAILED(long hr) {
+		return hr < 0;
 	}
 }

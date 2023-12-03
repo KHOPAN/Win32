@@ -134,7 +134,10 @@
     <ClCompile Include="aMain.cpp" />
     <ClCompile Include="BeginPaint.cpp" />
     <ClCompile Include="BitBlt.cpp" />
+    <ClCompile Include="CoInitialize.cpp" />
+    <ClCompile Include="CoInitializeEx.cpp" />
     <ClCompile Include="com_khopan_win32_Win32.h" />
+    <ClCompile Include="CoUninitialize.cpp" />
     <ClCompile Include="CreateCompatibleBitmap.cpp" />
     <ClCompile Include="CreateCompatibleDC.cpp" />
     <ClCompile Include="CreateFontIndirect.cpp" />
