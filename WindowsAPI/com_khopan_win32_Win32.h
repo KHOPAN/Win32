@@ -9,6 +9,14 @@ extern "C" {
 #endif
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    AbortSystemShutdown
+	 * Signature: (Ljava/lang/String;)I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_AbortSystemShutdown
+	(JNIEnv*, jclass, jstring);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    BeginPaint
 	 * Signature: (Lcom/khopan/win32/struct/memory/HWND;Lcom/khopan/win32/struct/holder/PAINTSTRUCT;)Lcom/khopan/win32/struct/memory/HDC;
 	 */

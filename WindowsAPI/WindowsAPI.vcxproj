@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AbortSystemShutdown.cpp" />
     <ClCompile Include="aMain.cpp" />
     <ClCompile Include="BeginPaint.cpp" />
     <ClCompile Include="BitBlt.cpp" />

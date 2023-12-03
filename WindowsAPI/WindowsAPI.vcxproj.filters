@@ -207,6 +207,9 @@
     <ClCompile Include="InitiateSystemShutdownEx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AbortSystemShutdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="javahelper.h">

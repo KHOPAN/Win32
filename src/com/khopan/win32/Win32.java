@@ -92,6 +92,7 @@ HRESULT {
 
 	public static final String VERSION = "1.0.0";
 
+	public static native int AbortSystemShutdown(String lpMachineName);
 	public static native HDC BeginPaint(HWND hWnd, PAINTSTRUCT lpPaint);
 	public static native int BitBlt(HDC hdc, int x, int y, int cx, int cy, HDC hdcSrc, int x1, int y1, long rop);
 	public static native long CoInitialize(LPVOID pvReserved);
