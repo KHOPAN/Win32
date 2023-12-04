@@ -7,5 +7,5 @@ JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_SetBkColor(JNIEnv* environme
 	long long address = NULL;
 	if(hdc && getNativeMemoryAddress(environment, address, hdc)) return NULL;
 	HDC context = reinterpret_cast<HDC>(address);
-	return SetBkColor(context, color);
+	return SetBkColor(context, static_cast<COLORREF>(color));
 }

@@ -23,7 +23,7 @@ JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_SetDIBitsToDevice(JNIEnv* env
 	BITMAPINFO info = {0};
 	if(lpbmi && getNativeBITMAPINFO(environment, info, lpbmi)) return 0;
 	info.bmiHeader.biSize = sizeof(info.bmiHeader);
-	jint result = SetDIBitsToDevice(context, xDest, yDest, w, h, xSrc, ySrc, StartScan, cLines, pixels, &info, ColorUse);
+	jint result = SetDIBitsToDevice(context, xDest, yDest, static_cast<DWORD>(w), static_cast<DWORD>(h), xSrc, ySrc, StartScan, cLines, pixels, &info, ColorUse);
 	
 	if(lpvBits) {
 		environment->ReleaseIntArrayElements(lpvBits, elements, NULL);

@@ -8,5 +8,5 @@ JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_SetDCBrushColor(JNIEnv* envi
 	long long address = NULL;
 	if(hdc && getNativeMemoryAddress(environment, address, hdc)) return CLR_INVALID;
 	HDC context = reinterpret_cast<HDC>(address);
-	return SetDCBrushColor(context, color);
+	return SetDCBrushColor(context, static_cast<COLORREF>(color));
 }
