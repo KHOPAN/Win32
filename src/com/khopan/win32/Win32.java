@@ -15,6 +15,8 @@ import com.khopan.win32.constants.RasterOperations;
 import com.khopan.win32.constants.RawInputNotifications;
 import com.khopan.win32.constants.SetWindowPosFlags;
 import com.khopan.win32.constants.ShowWindow;
+import com.khopan.win32.constants.ShutdownReason;
+import com.khopan.win32.constants.ShutdownType;
 import com.khopan.win32.constants.StockObjects;
 import com.khopan.win32.constants.SystemMetrics;
 import com.khopan.win32.constants.button.ButtonStyles;
@@ -100,7 +102,9 @@ MessageBoxDefaultButton,
 MessageBoxIcon,
 MessageBoxModal,
 MessageBoxOther,
-GUIDs {
+GUIDs,
+ShutdownReason,
+ShutdownType {
 	private Win32() {}
 
 	static {
