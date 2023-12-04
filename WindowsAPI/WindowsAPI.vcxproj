@@ -172,6 +172,7 @@
     <ClCompile Include="LoadCursor.cpp" />
     <ClCompile Include="MessageBox.cpp" />
     <ClCompile Include="MFCreateAttributes.cpp" />
+    <ClCompile Include="MFEnumDeviceSources.cpp" />
     <ClCompile Include="MFShutdown.cpp" />
     <ClCompile Include="MFStartup.cpp" />
     <ClCompile Include="Polygon.cpp" />

@@ -225,6 +225,9 @@
     <ClCompile Include="CoTaskMemFree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MFEnumDeviceSources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="javahelper.h">

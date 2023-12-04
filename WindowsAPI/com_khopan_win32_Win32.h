@@ -281,6 +281,14 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    MFEnumDeviceSources
+	 * Signature: (Lcom/khopan/win32/mediafoundation/IMFAttributes;Ljava/util/List;)J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_MFEnumDeviceSources
+	(JNIEnv*, jclass, jobject, jobject);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    MFShutdown
 	 * Signature: ()J
 	 */
