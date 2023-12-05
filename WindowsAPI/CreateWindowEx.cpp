@@ -14,7 +14,7 @@ JNIEXPORT jobject JNICALL Java_com_khopan_win32_Win32_CreateWindowEx(JNIEnv* env
 	if(hMenu && getNativeMemoryAddress(environment, menuAddress, hMenu)) return NULL;
 	long long instanceAddress = NULL;
 	if(hInstance && getNativeMemoryAddress(environment, instanceAddress, hInstance)) return NULL;
-	HWND window = CreateWindowExA(0L, className, windowName, dwStyle, X, Y, nWidth, nHeight, reinterpret_cast<HWND>(parentAddress), reinterpret_cast<HMENU>(menuAddress), reinterpret_cast<HINSTANCE>(instanceAddress), entry);
+	HWND window = CreateWindowExA(static_cast<DWORD>(dwExStyle), className, windowName, static_cast<DWORD>(dwStyle), X, Y, nWidth, nHeight, reinterpret_cast<HWND>(parentAddress), reinterpret_cast<HMENU>(menuAddress), reinterpret_cast<HINSTANCE>(instanceAddress), entry);
 	jobject result = NULL;
 	if(getJavaMemoryAddress(environment, result, reinterpret_cast<long long>(window), "com/khopan/win32/struct/memory/HWND")) return NULL;
 	if(lpClassName) environment->ReleaseStringUTFChars(lpClassName, className);
