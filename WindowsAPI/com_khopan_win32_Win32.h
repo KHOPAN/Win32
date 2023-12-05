@@ -417,6 +417,22 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    WSACleanup
+	 * Signature: ()I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_WSACleanup
+	(JNIEnv*, jclass);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
+	 * Method:    WSAStartup
+	 * Signature: (ILcom/khopan/win32/struct/holder/WSADATA;)I
+	 */
+	JNIEXPORT jint JNICALL Java_com_khopan_win32_Win32_WSAStartup
+	(JNIEnv*, jclass, jint, jobject);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    FormatErrorMessage
 	 * Signature: (J)Ljava/lang/String;
 	 */

@@ -39,3 +39,6 @@ bool getJavaRGBQUAD(JNIEnv*, jobject&, RGBQUAD);
 
 bool getNativeGUID(JNIEnv*, GUID&, jobject);
 bool getJavaGUID(JNIEnv*, jobject&, GUID);
+
+bool getNativeWSADATA(JNIEnv*, WSADATA&, jobject);
+bool getJavaWSADATA(JNIEnv*, jobject&, WSADATA);

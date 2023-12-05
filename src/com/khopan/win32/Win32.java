@@ -53,6 +53,7 @@ import com.khopan.win32.struct.holder.PAINTSTRUCT;
 import com.khopan.win32.struct.holder.POINT;
 import com.khopan.win32.struct.holder.RECT;
 import com.khopan.win32.struct.holder.WNDCLASS;
+import com.khopan.win32.struct.holder.WSADATA;
 import com.khopan.win32.struct.memory.HBITMAP;
 import com.khopan.win32.struct.memory.HBRUSH;
 import com.khopan.win32.struct.memory.HCURSOR;
@@ -164,6 +165,8 @@ ShutdownType {
 	public static native int SetWindowPos(HWND hWnd, HWND hWndInsertAfter, int X, int Y, int cx, int cy, int uFlags);
 	public static native int ShowWindow(HWND hWnd, int nCmdShow);
 	public static native int TranslateMessage(MSG lpMsg);
+	public static native int WSACleanup();
+	public static native int WSAStartup(int wVersionRequested, WSADATA lpWSAData);
 
 	public static HWND CreateWindow(String lpClassName, String lpWindowName, long dwStyle, int X, int Y, int nWidth, int nHeight, HWND hWndParent, HMENU hMenu, HINSTANCE hInstance, LPVOID lpParam) {
 		return Win32.CreateWindowEx(0L, lpClassName, lpWindowName, dwStyle, X, Y, nWidth, nHeight, hWndParent, hMenu, hInstance, lpParam);
