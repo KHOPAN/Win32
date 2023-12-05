@@ -345,6 +345,14 @@ extern "C" {
 
 	/*
 	 * Class:     com_khopan_win32_Win32
+	 * Method:    SendARP
+	 * Signature: (JJ[BLcom/khopan/win32/utils/MutableInteger;)J
+	 */
+	JNIEXPORT jlong JNICALL Java_com_khopan_win32_Win32_SendARP
+	(JNIEnv*, jclass, jlong, jlong, jbyteArray, jobject);
+
+	/*
+	 * Class:     com_khopan_win32_Win32
 	 * Method:    SendMessage
 	 * Signature: (Lcom/khopan/win32/struct/memory/HWND;IJJ)J
 	 */

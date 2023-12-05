@@ -180,6 +180,7 @@
     <ClCompile Include="PostQuitMessage.cpp" />
     <ClCompile Include="RegisterClass.cpp" />
     <ClCompile Include="SelectObject.cpp" />
+    <ClCompile Include="SendARP.cpp" />
     <ClCompile Include="SendMessage.cpp" />
     <ClCompile Include="SetBkColor.cpp" />
     <ClCompile Include="SetDCBrushColor.cpp" />

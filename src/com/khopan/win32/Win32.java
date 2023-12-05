@@ -64,6 +64,7 @@ import com.khopan.win32.struct.memory.HMENU;
 import com.khopan.win32.struct.memory.HPEN;
 import com.khopan.win32.struct.memory.HWND;
 import com.khopan.win32.struct.memory.LPVOID;
+import com.khopan.win32.utils.MutableInteger;
 
 public class Win32 implements
 MouseCursors,
@@ -156,6 +157,7 @@ ShutdownType {
 	public static native int RegisterClass(WNDCLASS lpWndClass);
 	public static native int SystemParametersInfo(int uiAction, int uiParam, long pvParam, int fWinIni);
 	public static native long SelectObject(HDC hdc, long h);
+	public static native long SendARP(long DestIP, long SrcIP, byte[] pMacAddr, MutableInteger PhyAddrLen);
 	public static native long SendMessage(HWND hWnd, int Msg, long wParam, long lParam);
 	public static native long SetBkColor(HDC hdc, long color);
 	public static native long SetDCBrushColor(HDC hdc, long color);
@@ -187,7 +189,7 @@ ShutdownType {
 	}
 
 	/**
-	 * Utilities used for format an error message
+	 * Utility used for format an error message
 	 * from GetLastError(), because implementing
 	 * the function FormatMessageW() would be
 	 * such a pain
